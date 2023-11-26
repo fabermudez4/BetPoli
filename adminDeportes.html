@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetPoli - Administración</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h2>BetPoli - Administración</h2>
+        <div class="logout-btn" onclick="cerrarSesion()">Cerrar Sesión</div>
+    </div>
+
+    <section>
+        <h3>Lista de Apuestas Deportivas</h3>
+        <!-- Mostrar la lista de apuestas deportivas desde el servidor -->
+        <ul id="listaApuestas">
+            <!-- Las apuestas se cargarán aquí dinámicamente con JavaScript -->
+        </ul>
+
+        <hr>
+
+        <h3>Acciones de Administración</h3>
+        <button onclick="mostrarFormulario()">Agregar Nueva Apuesta</button>
+
+        <!-- Formulario para agregar nueva apuesta (inicialmente oculto) -->
+        <form id="formularioNuevaApuesta" style="display: none;" onsubmit="agregarApuesta(); return false;">
+            <label for="equipo">Equipo:</label>
+            <input type="text" id="equipo" required>
+            <label for="cuota">Cuota:</label>
+            <input type="number" id="cuota" step="0.01" required>
+            <button type="submit">Agregar Apuesta</button>
+        </form>
+    </section>
+
+    <script>
+        function cerrarSesion() {
+            window.location.href = "/login";
+        }
+
+        function mostrarFormulario() {
+            // Muestra el formulario para agregar nueva apuesta
+            document.getElementById('formularioNuevaApuesta').style.display = 'block';
+        }
+
+        function agregarApuesta() {
+            // Lógica para enviar la nueva apuesta al servidor
+            // Después, actualiza la lista de apuestas
+            alert('Lógica para agregar la apuesta al servidor');
+            // Puedes recargar la página o utilizar AJAX para actualizar dinámicamente la lista
+        }
+
+        // Aquí puedes agregar lógica para cargar dinámicamente la lista de apuestas desde el servidor
+        // Puedes utilizar AJAX para hacer una solicitud al servidor y obtener la lista actualizada
+        // Luego, puedes actualizar la lista en el elemento con el id "listaApuestas"
+    </script>
+</body>
+</html>

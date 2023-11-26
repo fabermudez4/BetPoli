@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetPoli - Apuestas Deportivas</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .apuesta-section {
+            margin-bottom: 20px;
+        }
+
+        .apuesta-card {
+            display: inline-block;
+            margin-right: 20px; /* Ajusta el margen entre las tarjetas según tus preferencias */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>BetPoli - Apuestas Deportivas</h2>
+        <div class="logout-btn" onclick="irAusuario()">Regresar</div>
+    </div>
+
+    <section class="apuesta-section">
+        <h3>Listado de Apuestas Deportivas (Colombia vs Brazil)</h3>
+        <!-- Lista de equipos 1 y 2 con cuotas y campos para ingresar el monto de la apuesta -->
+        <div class="apuesta-card">
+            <p>Colombia - Cuota: 1.8</p>
+            <label for="montoEquipo1">Monto:</label>
+            <input type="number" id="montoEquipo1" placeholder="Ingrese el monto">
+            <button onclick="realizarApuesta('Colombia', document.getElementById('montoEquipo1').value)">Apostar por Equipo 1</button>
+        </div>
+
+        <div class="apuesta-card">
+            <p>Brazil - Cuota: 2.0</p>
+            <label for="montoEquipo2">Monto:</label>
+            <input type="number" id="montoEquipo2" placeholder="Ingrese el monto">
+            <button onclick="realizarApuesta('Brazil', document.getElementById('montoEquipo2').value)">Apostar por Equipo 2</button>
+        </div>
+    </section>
+
+    <section class="apuesta-section">
+        <h3>Listado de Apuestas Deportivas (Argentina vs Peru)</h3>
+        <!-- Lista de equipos 3 y 4 con cuotas y campos para ingresar el monto de la apuesta -->
+        <div class="apuesta-card">
+            <p>Argentina - Cuota: 2.5</p>
+            <label for="montoEquipo3">Monto:</label>
+            <input type="number" id="montoEquipo3" placeholder="Ingrese el monto">
+            <button onclick="realizarApuesta('Argentina', document.getElementById('montoEquipo3').value)">Apostar por Equipo 3</button>
+        </div>
+
+        <div class="apuesta-card">
+            <p>Peru - Cuota: 3.0</p>
+            <label for="montoEquipo4">Monto:</label>
+            <input type="number" id="montoEquipo4" placeholder="Ingrese el monto">
+            <button onclick="realizarApuesta('Peru', document.getElementById('montoEquipo4').value)">Apostar por Equipo 4</button>
+        </div>
+    </section>
+
+    <!-- Agrega más secciones según sea necesario -->
+
+    <script>
+        function irAusuario() {
+            window.location.href = "/usuario";
+        }
+
+        function realizarApuesta(equipo, monto) {
+            if (monto && monto > 0) {
+                alert('¡Apuesta realizada por ' + equipo + ' por un monto de ' + monto + '!');
+                // Puedes agregar lógica adicional para procesar la apuesta
+            } else {
+                alert('Ingrese un monto válido para la apuesta.');
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+

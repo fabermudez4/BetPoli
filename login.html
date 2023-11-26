@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetPoli - Inicio de Sesión</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h2>Inicia Sesión en BetPoli</h2>
+    <form th:action="@{/login}" method="post">
+        <label for="cedula">Cédula:</label>
+        <input type="text" id="cedula" name="cedula" required>
+    
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+    
+        <button type="submit">Iniciar Sesión</button>
+    </form>    
+
+    <p>¿No tienes una cuenta? <a href="/registro">Regístrate aquí</a></p>
+</body>
+</html>

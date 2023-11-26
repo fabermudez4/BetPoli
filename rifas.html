@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetPoli - Rifas</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h2>BetPoli - Rifas</h2>
+        <div class="logout-btn" onclick="irUsuario()">Regresar</div>
+    </div>
+
+    <section>
+        <h3>Rifas Disponibles</h3>
+        <!-- Lista de rifas con información y formulario para comprar boleto -->
+        <div class="rifa-card">
+            <p>Rifa de Artículos Tecnológicos</p>
+            <p>Descripción: Participa para ganar una variedad de artículos tecnológicos.</p>
+            <p>Precio del Boleto: $10</p>
+            <form onsubmit="comprarBoleto('Rifa de Artículos Tecnológicos', 10, this.bolNumber.value); return false;">
+                <label for="bolNumber">Número del Boleto:</label>
+                <select id="bolNumber" name="bolNumber" required>
+                    <!-- Generar opciones del 1 al 100 con JavaScript -->
+                    <script>
+                        for (var i = 1; i <= 100; i++) {
+                            document.write('<option value="' + i + '">' + i + '</option>');
+                        }
+                    </script>
+                </select>
+                <button type="submit">Comprar Boleto</button>
+            </form>
+        </div>
+
+        <div class="rifa-card">
+            <p>Rifa de Tarjetas de Regalo</p>
+            <p>Descripción: Gana tarjetas de regalo para tus tiendas favoritas.</p>
+            <p>Precio del Boleto: $5</p>
+            <form onsubmit="comprarBoleto('Rifa de Tarjetas de Regalo', 5, this.bolNumber.value); return false;">
+                <label for="bolNumber">Número del Boleto:</label>
+                <select id="bolNumber" name="bolNumber" required>
+                    <!-- Generar opciones del 1 al 100 con JavaScript -->
+                    <script>
+                        for (var i = 1; i <= 100; i++) {
+                            document.write('<option value="' + i + '">' + i + '</option>');
+                        }
+                    </script>
+                </select>
+                <button type="submit">Comprar Boleto</button>
+            </form>
+        </div>
+
+        <!-- Agrega más rifas según sea necesario -->
+    </section>
+
+    <script>
+        function irUsuario() {
+            window.location.href = "/usuario";
+        }
+
+        function comprarBoleto(rifa, precio, numero) {
+            var confirmacion = confirm('¿Está seguro de comprar el boleto número ' + numero + ' para la rifa "' + rifa + '" por un precio de $' + precio + '?');
+            if (confirmacion) {
+                alert('¡Has comprado el boleto número ' + numero + ' para la rifa: ' + rifa + '!');
+                // Puedes agregar lógica adicional para procesar la compra del boleto
+            }
+        }
+    </script>
+</body>
+</html>
+
+

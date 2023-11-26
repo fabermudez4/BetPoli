@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetPoli - Sorteos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h2>BetPoli - Sorteos</h2>
+        <div class="logout-btn" onclick="irUsuario()">Regresar</div>
+    </div>
+
+    <section>
+        <h3>Sorteos de Artículos Deportivos</h3>
+        <!-- Lista de sorteos de artículos deportivos con información, valor y botón para participar -->
+        <div class="sorteo-card">
+            <p>Sorteo de Zapatillas Deportivas</p>
+            <p>Fecha: 10 de diciembre de 2023</p>
+            <p>Descripción: Participa para ganar un par de zapatillas deportivas de última generación.</p>
+            <p>Valor del Sorteo: $50</p>
+            <button onclick="confirmarParticipacion('Sorteo de Zapatillas Deportivas', 50)">Participar en el Sorteo</button>
+        </div>
+
+        <div class="sorteo-card">
+            <p>Sorteo de Camisetas Firmadas</p>
+            <p>Fecha: 15 de diciembre de 2023</p>
+            <p>Descripción: Gana una camiseta autografiada por tu jugador favorito.</p>
+            <p>Valor del Sorteo: $30</p>
+            <button onclick="confirmarParticipacion('Sorteo de Camisetas Firmadas', 30)">Participar en el Sorteo</button>
+        </div>
+    </section>
+
+    <section>
+        <h3>Sorteos de Viajes</h3>
+        <!-- Lista de sorteos de viajes con información, valor y botón para participar -->
+        <div class="sorteo-card">
+            <p>Sorteo de Viaje a un Evento Deportivo</p>
+            <p>Fecha: 20 de enero de 2024</p>
+            <p>Descripción: Gana un viaje con todo incluido para asistir a un emocionante evento deportivo.</p>
+            <p>Valor del Sorteo: $100</p>
+            <button onclick="confirmarParticipacion('Sorteo de Viaje a un Evento Deportivo', 100)">Participar en el Sorteo</button>
+        </div>
+
+        <!-- Agrega más sorteos según sea necesario -->
+    </section>
+
+    <script>
+        function irUsuario() {
+            window.location.href = "/usuario";
+        }
+
+        function confirmarParticipacion(sorteo, valor) {
+            var confirmacion = confirm('¿Está seguro de participar en el sorteo "' + sorteo + '" por un valor de $' + valor + '?');
+            if (confirmacion) {
+                alert('¡Has participado en el sorteo: ' + sorteo + '!');
+                // Puedes agregar lógica adicional para procesar la participación en el sorteo
+            }
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetPoli - Usuario</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h2>Bienvenido a tu página de apuestas BetPoli</h2>
+        <!-- Agrega el siguiente botón de "Cerrar Sesión" -->
+        <div class="logout-btn" onclick="cerrarSesion()">Cerrar Sesión</div>
+    </div>
+
+    <section>
+        <h3>Apuestas Deportivas</h3>
+        <p>Explora las últimas apuestas deportivas</p>
+        <button onclick="irApuesta()">Hacer Apuesta</button>
+    </section>
+
+    <section>
+        <h3>Sorteos</h3>
+        <p>Participa en emocionantes sorteos</p>
+        <button onclick="irSorteo()">Participar en Sorteo</button>
+    </section>
+
+    <section>
+        <h3>Rifas</h3>
+        <p>Gana increíbles premios en nuestras rifas</p>
+        <button onclick="irRifa()">Comprar Boleto</button>
+    </section>
+
+    <script>
+        function cerrarSesion() {
+            // Aquí puedes agregar lógica para cerrar la sesión, como redirigir a la página de inicio de sesión
+            window.location.href = "/login";
+        }
+
+        function irApuesta() {
+            // Aquí puedes agregar lógica para cerrar la sesión, como redirigir a la página de inicio de sesión
+            window.location.href = "/apuestas";
+        }
+
+        function irSorteo() {
+            // Aquí puedes agregar lógica para cerrar la sesión, como redirigir a la página de inicio de sesión
+            window.location.href = "/sorteos";
+        }
+
+        function irRifa() {
+            // Aquí puedes agregar lógica para cerrar la sesión, como redirigir a la página de inicio de sesión
+            window.location.href = "/rifas";
+        }
+    </script>
+</body>
+</html>
+
